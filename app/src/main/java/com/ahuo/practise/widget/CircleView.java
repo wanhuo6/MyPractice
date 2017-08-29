@@ -31,9 +31,11 @@ public class CircleView extends View {
 
     private int mHeight = 1000;
 
-    private int mCircleRadius=mWidth/4;
+    private int mCircleRadius = mWidth / 4;
 
     private float mSwingProgress;
+
+    private int mAngle;
 
     private ValueAnimator animator;
 
@@ -67,7 +69,7 @@ public class CircleView extends View {
         mSwingPaint.setStrokeCap(Paint.Cap.ROUND);
         mSwingPaint.setStyle(Paint.Style.STROKE);
 
-        mBallPaint=new Paint();
+        mBallPaint = new Paint();
         mBallPaint.setColor(mContext.getResources().getColor(R.color.colorPrimary));
         mBallPaint.setAntiAlias(true);
         mBallPaint.setStrokeWidth(3);
@@ -87,9 +89,9 @@ public class CircleView extends View {
             } else {
                 mCirClePaint.setColor(mContext.getResources().getColor(R.color.colorPrimary));
             }
-            canvas.drawLine(2*mCircleRadius, 0, 2*mCircleRadius, 50, mCirClePaint);
+            canvas.drawLine(2 * mCircleRadius, 0, 2 * mCircleRadius, 50, mCirClePaint);
             // 旋转的度数 = 100 / 360
-            canvas.rotate(3.6f, 2*mCircleRadius,mCircleRadius);
+            canvas.rotate(3.6f, 2 * mCircleRadius, mCircleRadius);
         }
      /*   while (mSwingProgress>80){
             mSwingProgress=mSwingProgress-80;
@@ -99,15 +101,22 @@ public class CircleView extends View {
         }*/
         canvas.restore();
         canvas.save();
-        canvas.rotate(3.6f*mSwingProgress, 2*mCircleRadius, mCircleRadius);
-        canvas.drawLine(2*mCircleRadius, mCircleRadius, 2*mCircleRadius, 7*mCircleRadius/2, mSwingPaint);
+        canvas.rotate(mAngle, 2 * mCircleRadius, mCircleRadius);
+        canvas.rotate(3.6f * mSwingProgress, 2 * mCircleRadius, mCircleRadius);
+        canvas.drawLine(2 * mCircleRadius, mCircleRadius, 2 * mCircleRadius, 7 * mCircleRadius / 2, mSwingPaint);
         canvas.restore();
 
         canvas.save();
-        canvas.rotate(3.6f*mSwingProgress, 2*mCircleRadius, mCircleRadius);
-        canvas.drawCircle(2*mCircleRadius,mCircleRadius/4*15,mCircleRadius/4, mBallPaint);
+        canvas.rotate(mAngle, 2 * mCircleRadius, mCircleRadius);
+        canvas.rotate(3.6f * mSwingProgress, 2 * mCircleRadius, mCircleRadius);
+        canvas.drawCircle(2 * mCircleRadius, mCircleRadius / 4 * 15, mCircleRadius / 4, mBallPaint);
         canvas.restore();
 
+    }
+
+    public void setAngle(int angle) {
+        mAngle = angle;
+        invalidate();
     }
 
     public void startDotAnimator() {
