@@ -18,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mCircleView= (CircleView) findViewById(R.id.circleView);
-        mHandler.sendEmptyMessageDelayed(11, 50);
+        mCircleView.startDotAnimator();
+        mHandler.sendEmptyMessageDelayed(11, 500);
     }
 
     private Handler mHandler = new Handler() {
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             }
             mCircleView.setProgress(mProgress);
             mProgress++;
-            mHandler.sendEmptyMessageDelayed(11, 50);
+            mHandler.sendEmptyMessageDelayed(11, 500);
         }
     };
 }
