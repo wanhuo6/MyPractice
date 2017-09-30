@@ -1,0 +1,105 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">15.3dp</dimen>
+    <dimen name="activity_title_margin">28.6875dp</dimen>
+
+    <dimen name="activity_title_text_size">20sp</dimen>
+    <dimen name="activity_button_text_size">14sp</dimen>
+
+    <dimen name="public_list_divider_line_height">1px</dimen>
+
+    <!--体测-->
+    <dimen name="physical_bt_padding_top_down">12.43125dp</dimen>
+    <dimen name="physical_bt_min_width">172.125dp</dimen>
+    <dimen name="physical_radio_button_text_size">16sp</dimen>
+    <dimen name="physical_rab_padding_left_right">33.46875dp</dimen>
+    <dimen name="content_margin_left_right">43.03125dp</dimen>
+
+    <!-- 页面内Padding -->
+    <dimen name="public_padding_2">2dp</dimen>
+    <dimen name="public_padding_3">2.86875dp</dimen>
+    <dimen name="public_padding_5">4.78125dp</dimen>
+    <dimen name="public_padding_6">5.7375dp</dimen>
+    <dimen name="public_padding_7">6.69375dp</dimen>
+    <dimen name="public_padding_8">7.65dp</dimen>
+    <dimen name="public_padding_10">9.5625dp</dimen>
+    <dimen name="public_padding_12">11.475dp</dimen>
+    <dimen name="public_padding_13">12.43125dp</dimen>
+    <dimen name="public_padding_14">13.3875dp</dimen>
+    <dimen name="public_padding_15">14.34375dp</dimen>
+    <dimen name="public_padding_16">15.3dp</dimen>
+    <dimen name="public_padding_18">17.2125dp</dimen>
+    <dimen name="public_padding_20">19.125dp</dimen>
+    <dimen name="public_padding_22">21.0375dp</dimen>
+    <dimen name="public_padding_25">23.90625dp</dimen>
+    <dimen name="public_padding_26">24.8625dp</dimen>
+    <dimen name="public_padding_30">28.6875dp</dimen>
+    <dimen name="public_padding_32">30.6dp</dimen>
+    <dimen name="public_padding_35">33.46875dp</dimen>
+    <dimen name="public_padding_36">34.425dp</dimen>
+    <dimen name="public_padding_38">36.3375dp</dimen>
+    <dimen name="public_padding_40">38.25dp</dimen>
+    <dimen name="public_padding_42">40.1625dp</dimen>
+    <dimen name="public_padding_45">43.03125dp</dimen>
+    <dimen name="public_padding_46">43.9875dp</dimen>
+    <dimen name="public_padding_50">47.8125dp</dimen>
+    <dimen name="public_padding_52">49.725dp</dimen>
+    <dimen name="public_padding_60">57.375dp</dimen>
+    <dimen name="public_padding_62">59.2875dp</dimen>
+    <dimen name="public_padding_65">62.15625dp</dimen>
+    <dimen name="public_padding_70">66.9375dp</dimen>
+    <dimen name="public_padding_80">76.5dp</dimen>
+    <dimen name="public_padding_85">81.28125dp</dimen>
+    <dimen name="public_padding_90">86.0625dp</dimen>
+    <dimen name="public_padding_100">95.625dp</dimen>
+    <dimen name="public_padding_110">105.1875dp</dimen>
+    <dimen name="public_padding_120">114.75dp</dimen>
+    <dimen name="public_padding_130">124.3125dp</dimen>
+    <dimen name="public_padding_140">133.875dp</dimen>
+    <dimen name="public_padding_150">143.4375dp</dimen>
+    <dimen name="public_padding_168">160.65dp</dimen>
+    <dimen name="public_padding_180">172.125dp</dimen>
+    <dimen name="public_padding_200">191.25dp</dimen>
+    <dimen name="public_padding_220">210.375dp</dimen>
+    <dimen name="public_padding_240">229.5dp</dimen>
+    <dimen name="public_padding_250">239.0625dp</dimen>
+    <dimen name="public_padding_280">267.75dp</dimen>
+    <dimen name="public_padding_320">306dp</dimen>
+    <dimen name="public_padding_350">334.6875dp</dimen>
+    <dimen name="public_padding_380">363.375dp</dimen>
+    <dimen name="public_padding_410">392.0625dp</dimen>
+    <dimen name="public_padding_440">420.75dp</dimen>
+    <dimen name="public_padding_500">478.125dp</dimen>
+    <dimen name="public_padding_588">562.275dp</dimen>
+
+
+    <dimen name="public_s_text_list2">15.3dp</dimen>
+    <dimen name="public_s_text_detail_list2">13.3875dp</dimen>
+    <dimen name="public_s_text_content_2_btn">15.3dp</dimen>
+    <!--私教资源-->
+    <dimen name="person_train_item_content_height">86.0625dp</dimen>
+
+    <dimen name="progress_height">30.6dp</dimen>
+    <dimen name="public_text_size_10">10sp</dimen>
+    <dimen name="public_text_size_12">12sp</dimen>
+    <dimen name="public_text_size_14">14sp</dimen>
+    <dimen name="public_text_size_15">15sp</dimen>
+    <dimen name="public_text_size_16">16sp</dimen>
+    <dimen name="public_text_size_18">18sp</dimen>
+    <dimen name="public_text_size_20">20sp</dimen>
+    <dimen name="public_text_size_22">22sp</dimen>
+    <dimen name="public_text_size_24">24sp</dimen>
+    <dimen name="public_text_size_25">25sp</dimen>
+    <dimen name="public_text_size_26">26sp</dimen>
+    <dimen name="public_text_size_28">28sp</dimen>
+    <dimen name="public_text_size_30">30sp</dimen>
+    <dimen name="public_text_size_32">32sp</dimen>
+    <dimen name="public_text_size_34">34sp</dimen>
+    <dimen name="public_text_size_36">36sp</dimen>
+    <dimen name="public_text_size_42">42sp</dimen>
+    <dimen name="public_text_size_54">54sp</dimen>
+
+    <dimen name="px4">2.86875dp</dimen>
+    <dimen name="px40">28.6875dp</dimen>
+
+</resources>

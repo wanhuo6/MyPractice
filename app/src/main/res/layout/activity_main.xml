@@ -5,9 +5,24 @@
     >
 
     <com.ahuo.practise.widget.CircleView
+        android:visibility="gone"
         android:id="@+id/circleView"
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <com.ahuo.practise.widget.SunView
+        android:visibility="gone"
+        android:id="@+id/sunView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <View
+        android:layout_marginTop="@dimen/public_padding_20"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/public_padding_2"
+        />
 
 </RelativeLayout>

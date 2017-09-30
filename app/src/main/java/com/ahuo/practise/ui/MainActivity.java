@@ -1,18 +1,13 @@
-package com.ahuo.practise;
+package com.ahuo.practise.ui;
 
-import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 
+import com.ahuo.practise.R;
 import com.ahuo.practise.widget.CircleView;
 
-public class MainActivity extends AppCompatActivity implements SensorEventListener {
+public class MainActivity extends AppCompatActivity {
 
     private int mProgress;
 
@@ -26,12 +21,12 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+      /*  mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         mCircleView = (CircleView) findViewById(R.id.circleView);
         mCircleView.startDotAnimator();
-        mHandler.sendEmptyMessageDelayed(11, 500);
+        mHandler.sendEmptyMessageDelayed(11, 500);*/
     }
-
+/*
     private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -84,5 +79,5 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     @Override
     public void onAccuracyChanged(Sensor sensor, int i) {
 
-    }
+    }*/
 }
