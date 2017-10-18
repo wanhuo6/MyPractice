@@ -1,1 +1,1 @@
-include ':app', ':opengles'
+include ':app', ':opengles', ':webviewtest', ':mychat', ':mychat'
