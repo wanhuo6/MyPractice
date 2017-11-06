@@ -3,9 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MyPractice.iml" filepath="$PROJECT_DIR$/MyPractice.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Practise.iml" filepath="$PROJECT_DIR$/Practise.iml" />
+      <module fileurl="file://E:\projecct\MyPractice\Practise.iml" filepath="E:\projecct\MyPractice\Practise.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/mychat/mychat.iml" filepath="$PROJECT_DIR$/mychat/mychat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/niochat/niochat.iml" filepath="$PROJECT_DIR$/niochat/niochat.iml" />
       <module fileurl="file://$PROJECT_DIR$/opengles/opengles.iml" filepath="$PROJECT_DIR$/opengles/opengles.iml" />
       <module fileurl="file://$PROJECT_DIR$/webviewtest/webviewtest.iml" filepath="$PROJECT_DIR$/webviewtest/webviewtest.iml" />
     </modules>

@@ -21,10 +21,11 @@ import java.net.Socket;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static final String CHARCODE = "utf-8";
-    //public static final String IP = "192.168.21.194";
-    public static final String IP = "47.93.247.240";
 
-    private final static int PORT = 8821;
+    //public static final String IP = "47.93.247.240";
+    // private final static int PORT = 8821;
+    public static final String IP = "192.168.21.194";
+    private final static int PORT = 9900;
     private EditText mEtClientInput;
     private TextView mTvServerBack;
     private Button mBtSend;
@@ -33,6 +34,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Socket mSocket;
     private BufferedReader mBufferedReader;
     private OutputStream mSocketOut;
+
+    private static String USER_CONTENT_SPLIT = "#@#";
+    private String name = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initView() {
         mEtClientInput = (EditText) findViewById(R.id.et_client_input);
         mTvServerBack = (TextView) findViewById(R.id.tv_server_back);
-        mScrollView= (ScrollView) findViewById(R.id.scrollView);
+        mScrollView = (ScrollView) findViewById(R.id.scrollView);
         mBtSend = (Button) findViewById(R.id.bt_send);
         mBtSend.setOnClickListener(this);
         MyLog.e("init");
@@ -62,24 +66,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initSocket() {
         try {
             mSocket = new Socket(IP, PORT);
-            if (mSocket==null||mSocket.isClosed()){
-                ToastUtil.showToast("服务器没开，请稍后重试！");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
+        }
+            if (mSocket == null || mSocket.isClosed() ||! mSocket.isConnected()) {
+              //  ToastUtil.showToast("服务器没开，请稍后重试！");
                 return;
             }
             // 接收服务器的反馈
             MyLog.e("-----------");
+        try {
             mBufferedReader = new BufferedReader(new InputStreamReader(
                     mSocket.getInputStream()));
-            String res;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        String res;
             //String res = mBufferedReader.readLine();
+        try {
             while ((res = mBufferedReader.readLine()) != null) {
                 MyLog.e("=========");
                 receiveMsg(res);
             }
         } catch (IOException e) {
-            MyLog.e(e.getMessage());
             e.printStackTrace();
         }
+
     }
 
     private void initData() {
@@ -104,7 +117,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void run() {
                         super.run();
-                        sendMsg(android.os.Build.MODEL+":  "+msg);
+                        if (mSocket == null) {
+                            initSocket();
+                        }
+                        sendMsg(android.os.Build.MODEL + ":  " + msg);
                     }
                 }.start();
                 break;
@@ -116,7 +132,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void receiveMsg(String msg) {
         if (msg != null) {
-            msg = Util.decode(msg, CHARCODE);
+           // msg = Util.decode(msg, CHARCODE);
             System.out.println("c3:" + msg);
             final String finalRes = msg;
             runOnUiThread(new Runnable() {
@@ -131,15 +147,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void sendMsg(String msg) {
         try {
+           /* if ("".equals(name)) {
+                name = msg;
+                msg = name + USER_CONTENT_SPLIT;
+            } else {
+                msg = name + USER_CONTENT_SPLIT + msg;
+            }*/
             // 发送消息
             // base64 编码，防止中文乱码
-            msg = Util.encode(msg.getBytes(CHARCODE));
+            // msg = Util.encode(msg.getBytes(CHARCODE));
             msg = msg + "\r\n";
             mSocketOut = mSocket.getOutputStream();
             mSocketOut.write(msg.getBytes(CHARCODE));
             mSocketOut.flush();
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             MyLog.e(e.getMessage());
             e.printStackTrace();
         }
