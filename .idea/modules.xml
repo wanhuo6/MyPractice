@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/mychat/mychat.iml" filepath="$PROJECT_DIR$/mychat/mychat.iml" />
       <module fileurl="file://$PROJECT_DIR$/niochat/niochat.iml" filepath="$PROJECT_DIR$/niochat/niochat.iml" />
       <module fileurl="file://$PROJECT_DIR$/opengles/opengles.iml" filepath="$PROJECT_DIR$/opengles/opengles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/toolbar/toolbar.iml" filepath="$PROJECT_DIR$/toolbar/toolbar.iml" />
       <module fileurl="file://$PROJECT_DIR$/webviewtest/webviewtest.iml" filepath="$PROJECT_DIR$/webviewtest/webviewtest.iml" />
     </modules>
   </component>
