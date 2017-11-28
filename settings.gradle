@@ -1,1 +1,1 @@
-include ':app', ':opengles', ':webviewtest', ':mychat', ':mychat', ':niochat', ':toolbar'
+include ':app', ':opengles', ':webviewtest', ':mychat', ':mychat', ':niochat', ':toolbar', ':piechart'
