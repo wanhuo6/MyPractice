@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rl_parent"
+    >
+    <TextView
+        android:layout_marginBottom="@dimen/public_padding_32"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:id="@+id/tv_button"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:text="开始"
+        android:gravity="center"
+        android:background="@drawable/bg_circle"
+        android:textColor="@color/colorPrimary"
+        />
+
+</RelativeLayout>

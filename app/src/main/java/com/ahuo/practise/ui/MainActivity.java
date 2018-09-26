@@ -11,7 +11,7 @@ import com.ahuo.tool.util.ToastUtil;
 public class MainActivity extends AppCompatActivity {
 
 
-    private ProgressButtonView mTasksView;
+    private ProgressButtonView mProgressButton;
 
 
 
@@ -32,8 +32,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initView() {
-        mTasksView = findViewById(R.id.tasks_view);
-        mTasksView.setLongClickListener(new ProgressButtonView.LongClickListener() {
+        mProgressButton = findViewById(R.id.progressButton);
+        mProgressButton.setLongClickListener(new ProgressButtonView.LongClickListener() {
             @Override
             public void complete() {
                 ToastUtil.showToast("结束");

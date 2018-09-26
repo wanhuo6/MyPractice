@@ -6,13 +6,18 @@
     >
 
     <com.ahuo.practise.widget.ProgressButtonView
-        android:id="@+id/tasks_view"
+        android:id="@+id/progressButton"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_gravity="center"
         app:progressColor="@color/colorAccent"
         app:progressWidth="@dimen/public_padding_5"
         app:progressSpace="@dimen/public_padding_5"
+        />
+
+    <com.ahuo.practise.widget.JumpScaleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         />
 
 </RelativeLayout>

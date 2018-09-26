@@ -50,18 +50,30 @@ public class ProgressButtonView extends View { // 画实心圆的画笔
 
     private LongClickListener mLongClickListener;
 
+    public ProgressButtonView(Context context) {
+        this(context, null);
+    }
+
     public ProgressButtonView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-        mBitmap = BitmapFactory.decodeResource(context.getResources(),
-                R.mipmap.icon_main_history);
-        mImgWidth = mBitmap.getWidth();
-        mImgHeight = mBitmap.getHeight();
-        initAttrs(context, attrs);
+        this(context, attrs, 0);
+    }
+
+    public ProgressButtonView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        initBitmap();
+        initAttrs(attrs);
         initVariable();
     }
 
-    private void initAttrs(Context context, AttributeSet attrs) {
-        TypedArray typeArray = context.getTheme().obtainStyledAttributes(attrs,
+    private void initBitmap() {
+        mBitmap = BitmapFactory.decodeResource(getContext().getResources(),
+                R.mipmap.icon_main_history);
+        mImgWidth = mBitmap.getWidth();
+        mImgHeight = mBitmap.getHeight();
+    }
+
+    private void initAttrs(AttributeSet attrs) {
+        TypedArray typeArray = getContext().getTheme().obtainStyledAttributes(attrs,
                 R.styleable.ProgressButtonView, 0, 0);
         mProgressWidth = typeArray.getDimension(
                 R.styleable.ProgressButtonView_progressWidth, 5);
@@ -69,7 +81,7 @@ public class ProgressButtonView extends View { // 画实心圆的画笔
                 R.styleable.ProgressButtonView_progressSpace, 0);
         mProgressColor = typeArray.getColor(
                 R.styleable.ProgressButtonView_progressColor, 0xFFFFFFFF);
-        mProgressRadius = mImgWidth / 2 + mProgressWidth/2 +mProgressSpace;
+        mProgressRadius = mImgWidth / 2 + mProgressWidth / 2 + mProgressSpace;
     }
 
     public void setLongClickListener(LongClickListener longClickListener) {
@@ -143,7 +155,7 @@ public class ProgressButtonView extends View { // 画实心圆的画笔
 
     private void stopPlay() {
         setProgress(0);
-      //  mHandler.removeCallbacksAndMessages(null);
+        //  mHandler.removeCallbacksAndMessages(null);
     }
 
 
