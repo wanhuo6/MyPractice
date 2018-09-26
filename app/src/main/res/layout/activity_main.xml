@@ -2,27 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
-    <com.ahuo.practise.widget.CircleView
-        android:visibility="gone"
-        android:id="@+id/circleView"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <com.ahuo.practise.widget.SunView
-        android:visibility="gone"
-        android:id="@+id/sunView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-
-    <View
-        android:layout_marginTop="@dimen/public_padding_20"
-        android:background="@color/colorAccent"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/public_padding_2"
+    <com.ahuo.practise.widget.ProgressButtonView
+        android:id="@+id/tasks_view"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        app:progressColor="@color/colorAccent"
+        app:progressWidth="@dimen/public_padding_5"
+        app:progressSpace="@dimen/public_padding_5"
         />
 
 </RelativeLayout>

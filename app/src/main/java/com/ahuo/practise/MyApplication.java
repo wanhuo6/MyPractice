@@ -3,6 +3,7 @@ package com.ahuo.practise;
 import android.app.Application;
 
 import com.ahuo.tool.util.MyLog;
+import com.ahuo.tool.util.ToastUtil;
 
 /**
  * description :
@@ -22,6 +23,7 @@ public class MyApplication extends Application {
         super.onCreate();
         myApplication = this;
         MyLog.init(true, "Practice---");
+        ToastUtil.init(this);
 
     }
 }
