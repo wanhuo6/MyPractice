@@ -15,6 +15,34 @@
         app:progressSpace="@dimen/public_padding_5"
         />
 
+    <com.ahuo.practise.widget.TimeDownView
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/public_padding_32"
+        android:id="@+id/time_down"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimary"
+        />
+
+    <com.ahuo.practise.widget.TimerCountdownView
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/time_count_down"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_count_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/public_text_size_32"
+        android:textColor="@color/colorPrimary"
+        android:text="倒计时"/>
+
     <com.ahuo.practise.widget.JumpScaleButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
