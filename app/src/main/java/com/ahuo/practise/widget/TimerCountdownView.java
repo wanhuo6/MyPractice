@@ -67,7 +67,9 @@ public class TimerCountdownView extends View {
                     }
 //					Log.d("", "剩余"+mMaxSeconds+"秒" +"  剩余角度："+mMaxAngle);
                 }else{
-                    mListener.onTimeArrive(true);
+                    if (mListener!=null){
+                        mListener.onTimeArrive(true);
+                    }
                 }
             }
         };
